@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodge Supercars - Contact/Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Background video -->
+ <video autoplay muted loop id="bgVideo">
+    <source src="background.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <header>
+    <h1>Contact & Login</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="models.html">Models</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact/Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section class="section" id="auth">
+    <h2>User Login</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+    <button onclick="logout()">Logout</button>
+  </section>
+
+  <section id="dashboard" class="section" style="display: none;">
+    <h2>Welcome, <span id="userEmail"></span>!</h2>
+    <p>This is your personalized dashboard.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dodge Supercars. All rights reserved.</p>
+  </footer>
+</body>
+</html>
